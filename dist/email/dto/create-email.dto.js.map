@@ -1,0 +1,1 @@
+{"version":3,"file":"create-email.dto.js","sourceRoot":"","sources":["../../../src/email/dto/create-email.dto.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,qDAA8D;AAE9D,MAAa,cAAc;CAa1B;AAVC;IAFC,4BAAU,EAAE;IACZ,0BAAQ,EAAE;;4CACW;AAGtB;IAFC,4BAAU,EAAE;IACZ,0BAAQ,EAAE;;0CACS;AAGpB;IAFC,4BAAU,EAAE;IACZ,0BAAQ,EAAE;;+CACc;AAGzB;IAFC,4BAAU,EAAE;IACZ,uBAAK,EAAE;;iDACmB;AAZ7B,wCAaC"}

@@ -1,0 +1,35 @@
+import { CompanyEntity } from 'src/company/entities/company.entity';
+import { DeleteResult, Repository, UpdateResult } from 'typeorm';
+import { CreateAddonsDTO, CreateCategoryDTO, CreateProductDTO } from './dto/create-product.dto';
+import { UpdateProductDTO } from './dto/update-product.dto';
+import { AddonsEntity } from './entities/addons.entity';
+import { CategoryEntity } from './entities/category.entity';
+import { ProductEntity } from './entities/product.entity';
+import { Addons, Category, Product } from './interfaces/product.interface';
+import { UpdateProductStockDTO } from './dto/update-product-stock.dto';
+export declare class ProductService {
+    private readonly categroyRepository;
+    private readonly addonsRepository;
+    private readonly productRepository;
+    private readonly companyRepository;
+    constructor(categroyRepository: Repository<CategoryEntity>, addonsRepository: Repository<AddonsEntity>, productRepository: Repository<ProductEntity>, companyRepository: Repository<CompanyEntity>);
+    createCategory(category: CreateCategoryDTO): Promise<Category>;
+    deleteCategory(id: number): Promise<DeleteResult>;
+    getCategories(): Promise<Category[]>;
+    getCategory(id: number): Promise<Category>;
+    updateCategory(id: number, categoryRecord: CreateCategoryDTO): Promise<Category>;
+    createAddons(addons: CreateAddonsDTO): Promise<Addons>;
+    deleteAddon(id: number): Promise<DeleteResult>;
+    getAddons(): Promise<Addons[]>;
+    getAddon(id: number): Promise<Addons>;
+    updateAddons(id: number, addonsRecord: CreateAddonsDTO): Promise<Addons>;
+    createProduct(product: CreateProductDTO): Promise<Product>;
+    getProduct(id: number): Promise<Product>;
+    getProductCategory(id: number): Promise<Category>;
+    getProductByCategory(categoryId: number): Promise<Product[]>;
+    getProducts(): Promise<Product[]>;
+    getProductAddons(id: number): Promise<Addons[]>;
+    updateProduct(id: number, recordToUpdate: UpdateProductDTO): Promise<UpdateResult>;
+    updateProductStock(id: number, recordToUpdate: UpdateProductStockDTO): Promise<UpdateResult>;
+    deleteProduct(id: number): Promise<DeleteResult>;
+}
